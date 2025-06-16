@@ -1,0 +1,122 @@
+footer {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-neutre);
+    color: var(--fond-clair);
+}
+
+.footer-columns {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-columns > div {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer-columns .border-right {
+    border-right: 2px solid var(--pantone-rouge);
+    padding-right: 20px;
+}
+
+.footer-columns .border-left {
+    border-left: 2px solid var(--pantone-rouge);
+    padding-left: 20px;
+}
+
+.footer-columns h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.footer-columns .btn {
+    margin-top: 16px;
+    display: inline-block;
+}
+
+.footer-bottom {
+    background-color: #222;
+    color: white;
+    width: 100%;
+    padding: 40px 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    align-items: flex-start;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer-bottom h5 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--pantone-rouge);
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer-title-social {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--pantone-rouge);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: var(--pantone-rouge);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.footer-copy {
+    background-color: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
