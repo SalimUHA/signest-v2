@@ -9,17 +9,16 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
 </head>
 <body>
-{{-- HEADER en haut de page --}}
 @include('components.header')
 
-{{-- Contenu de la page --}}
 <main>
     @yield('content')
 </main>
 
-{{-- FOOTER en bas de page --}}
 @include('components.footer')
+<script src="{{ asset('js/accueil.js') }}" defer></script>
 </body>
 </html>
