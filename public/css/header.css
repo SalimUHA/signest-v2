@@ -35,7 +35,7 @@ header {
     background-color: var(--gris-neutre);
     color: var(--blanc);
     height: 120px;
-    padding: 8px 40px 0;
+    padding: 8px 40px 0; /* Ce padding empêche le contenu de coller les bords de l'écran */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,14 +47,14 @@ header {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* C'EST ICI QUE LA MODIFICATION A LIEU */
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
     width: 100%;
+    /* MODIFIÉ : Les lignes max-width et margin ont été supprimées pour permettre au contenu de prendre toute la largeur. */
 }
 
 header.scrolled {
@@ -65,7 +65,7 @@ header.scrolled {
 
 
 .logoheader {
-    height: 64px;
+    height: 80px; /* Logo agrandi */
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -78,7 +78,6 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: auto;
 }
 
 nav {

@@ -18,7 +18,6 @@ html, body {
 }
 
 
-
 .page-wrapper {
     min-height: 100vh;
     display: flex;
@@ -55,6 +54,18 @@ html, body {
     margin-top: 0px;
 }
 
+/* NOUVEAU : Voile de transparence sur la vidéo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Noir avec 40% d'opacité */
+    z-index: 1;
+}
+
 .hero video {
     position: absolute;
     top: 0;
@@ -69,7 +80,7 @@ html, body {
     position: relative;
     color: var(--blanc);
     max-width: 900px;
-    z-index: 1;
+    z-index: 2; /* MODIFIÉ : Assure que le contenu est au-dessus du voile */
     padding: 20px;
     text-align: center;
     font-weight: 550;
@@ -262,3 +273,77 @@ html, body {
         transform: translateY(0);
     }
 }
+/* --- Section Appel à l'Action (CTA) - Version Fond Flouté --- */
+.cta-banner {
+    position: relative; /* Requis pour positionner le fond flouté */
+    overflow: hidden;   /* Requis pour contenir le flou */
+    color: var(--blanc);
+    padding: 120px 40px;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    margin-top: 40px;
+    border-bottom: 3px solid var(--pantone-rouge);
+    text-align: center;
+}
+
+/* Le pseudo-élément qui porte l'image de fond et le flou */
+.cta-banner::before {
+    content: '';
+    position: absolute;
+    /* On le fait déborder un peu pour que les bords flous soient invisibles */
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* C'est ici qu'on applique le flou ! */
+    z-index: 1; /* Il se place en fond */
+}
+
+/* Le pseudo-élément qui sert de filtre sombre pour la lisibilité */
+.cta-banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Filtre noir à 50% d'opacité */
+    z-index: 2; /* Il se place par-dessus le fond flou */
+}
+
+/* Le contenu textuel, qui passe au-dessus de tout */
+.cta-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-banner .btn {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 32px;
+}
+
+.cta-banner .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* On supprime le code responsive qui n'est plus nécessaire pour cette version */

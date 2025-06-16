@@ -6,7 +6,9 @@
 <header>
     <div class="header-content">
         <div class="logo-container">
-            <img src="/icons/logo.png" alt="Signest" class="logoheader">
+            <a href="{{ url('/accueil') }}">
+                <img src="/icons/logo.png" alt="Signest - Retour à l'accueil" class="logoheader">
+            </a>
         </div>
         <nav>
             <a href="/accueil" class="active">Accueil</a>
