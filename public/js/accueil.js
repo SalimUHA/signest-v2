@@ -1,19 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.feature-card');
-    const observer = new IntersectionObserver((entries) => {
+
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animationDelay = `${entry.target.dataset.index * 0.1}s`;
                 entry.target.classList.add('appear');
                 observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.15
-    });
+    }, { threshold: 0.1 });
 
-    cards.forEach((card, index) => {
-        card.dataset.index = index;
-        observer.observe(card);
-    });
+    cards.forEach(card => observer.observe(card));
 });
+const cards = document.querySelectorAll('.feature-card');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // pour ne l’animer qu'une fois
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+cards.forEach(card => observer.observe(card));

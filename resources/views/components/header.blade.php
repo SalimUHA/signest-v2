@@ -1,11 +1,18 @@
+<div class="topbar">
+    <span>📞 03 89 70 54 24</span>
+    <span>📧 pc@signest68.com</span>
+</div>
+
 <header>
-    <a href="{{ url('/accueil') }}">
-        <img src="/icons/logo.png" alt="LogoSignest" class="logoheader">
-    </a>
-    <nav>
-        <a href="{{ url('/accueil') }}" class="{{ request()->is('accueil') ? 'active' : '' }}">Accueil</a>
-        <a href="{{ url('/apropos') }}" class="{{ request()->is('apropos') ? 'active' : '' }}">À propos</a>
-        <a href="{{ url('/realisations') }}" class="{{ request()->is('realisations') ? 'active' : '' }}">Nos réalisations</a>
-        <a href="{{ url('/contact') }}" class="{{ request()->is('contact') ? 'active' : '' }}">Contact</a>
-    </nav>
+    <div class="header-content">
+        <div class="logo-container">
+            <img src="/icons/logo.png" alt="Signest" class="logoheader">
+        </div>
+        <nav>
+            <a href="/accueil" class="active">Accueil</a>
+            <a href="/apropos">À propos</a>
+            <a href="/realisations">Nos réalisations</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </div>
 </header>
