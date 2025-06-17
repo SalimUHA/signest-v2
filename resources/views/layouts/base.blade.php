@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="{{ asset('css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/apropos.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="@yield('body_class')">
 @include('components.header')
 
 <main>
@@ -25,6 +26,8 @@
 @include('components.footer')
 <script src="{{ asset('js/accueil.js') }}" defer></script>
 <script src="{{ asset('js/header.js') }}" defer></script>
+<script src="{{ asset('js/apropos.js') }}" defer></script>
+
 @stack('scripts')
 </body>
 </html>

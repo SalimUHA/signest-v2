@@ -1,7 +1,6 @@
 @extends('layouts.base')
 
 @section('title', 'Accueil')
-
 @section('content')
     <section class="hero">
         <video autoplay muted loop playsinline>

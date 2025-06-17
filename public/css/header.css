@@ -159,3 +159,16 @@ nav a.active::after {
     opacity: 1;
     transform: scale(1.1);
 }
+
+/* styles sans bordure gris a ajouter sur les pages blades si on le souhaite */
+.page-with-hero header {
+    background-color: transparent;
+    border-bottom-color: transparent; =
+    box-shadow: none;
+}
+
+.page-with-hero header.scrolled {
+    background-color: rgba(127, 127, 127, 0.88);
+    border-bottom-color: var(--pantone-rouge);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
