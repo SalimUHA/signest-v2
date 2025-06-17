@@ -180,6 +180,10 @@ body {
 .feature-card.green::before {
     background-color: #86B554;
 }
+.feature-card.lightyellow::before {
+    background-color: #FFEE00;
+}
+
 
 .service-icon {
     display: flex;

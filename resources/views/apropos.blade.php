@@ -26,7 +26,7 @@
                 </p>
             </div>
             <div class="contenu-image">
-                <img src="{{ asset('images/facade-signest.jpeg') }}" alt="Atelier Signest">
+                <img src="{{ asset('images/interieur-signest.jpeg') }}" alt="Atelier Signest">
             </div>
         </div>
 
@@ -61,14 +61,18 @@
                 ['image' => 'icons/savoirfaire.png','titre'=>'Savoir-Faire','texte'=>'Forts de notre expertise, nous allions maîtrise technique et sens du détail pour livrer des prestations de qualité, sur mesure et durables.'],
             ];
         @endphp
-        <div class="bloc-section valeurs fade-in zoom-in">
+        <div class="bloc-section valeurs">
             <h2 class="titre-section center">Nos valeurs</h2>
-            <div class="valeurs-modernes">
+            <div class="valeurs-zigzag">
                 @foreach($valeurs as $valeur)
-                    <div class="valeur-carte zoom-in">
-                        <img src="{{ asset($valeur['image']) }}" alt="Image">
-                        <h3>{{ $valeur['titre'] }}</h3>
-                        <p>{{ $valeur['texte'] }}</p>
+                    <div class="valeur-item fade-in @if($loop->odd) right-image @endif">
+                        <div class="valeur-image">
+                            <img src="{{ asset($valeur['image']) }}" alt="{{ $valeur['titre'] }}">
+                        </div>
+                        <div class="valeur-texte">
+                            <h3>{{ $valeur['titre'] }}</h3>
+                            <p>{{ $valeur['texte'] }}</p>
+                        </div>
                     </div>
                 @endforeach
             </div>

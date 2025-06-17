@@ -74,6 +74,9 @@
 .item.green::after {
     background-color: #86B554;
 }
+.item.lightyellow::after {
+    background-color: #FFEE00;
+}
 
 .item:nth-child(1) {
     left: -50%;
@@ -135,7 +138,7 @@
 .item:nth-child(2) .content .service-icon {
     height: 80px;
     width: 80px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 .item:nth-child(2) .content .title {
     font-family: 'Urbanist', sans-serif;

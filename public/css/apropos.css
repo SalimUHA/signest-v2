@@ -266,3 +266,81 @@
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
+/* --- Section Valeurs - Layout Superposé --- */
+
+.valeurs-zigzag {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* On réduit un peu l'espace entre les blocs */
+    margin-top: 60px;
+}
+
+.valeur-item {
+    display: grid; /* On utilise CSS Grid pour la magie de la superposition */
+    grid-template-columns: repeat(10, 1fr); /* On crée une grille de 10 colonnes pour plus de flexibilité */
+    align-items: center;
+    padding: 20px 0;
+}
+
+.valeur-image {
+    /* L'image couvrira 6 colonnes de la grille */
+    grid-column: 1 / 7;
+    grid-row: 1; /* L'image et le texte sont sur la même ligne de la grille */
+    opacity: 0.9;
+}
+
+.valeur-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.valeur-texte {
+    /* Le texte couvrira 5 colonnes en partant de la 6ème */
+    grid-column: 6 / 11;
+    grid-row: 1; /* Sur la même ligne que l'image pour la superposition */
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 2; /* On s'assure que le texte est bien au-dessus de l'image */
+}
+
+/* On alterne pour la version avec l'image à droite */
+.valeur-item.right-image .valeur-image {
+    grid-column: 5 / 11; /* L'image va de la colonne 5 à 11 */
+}
+
+.valeur-item.right-image .valeur-texte {
+    grid-column: 1 / 6; /* Le texte va de la colonne 1 à 6 */
+}
+
+.valeur-texte h3 {
+    font-size: 1.8rem;
+    color: var(--pantone-rouge);
+    margin-bottom: 15px;
+}
+
+.valeur-texte p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Adaptation pour les mobiles */
+@media (max-width: 768px) {
+    .valeur-item {
+        display: block; /* On annule la grille pour superposer verticalement */
+        margin-bottom: 40px;
+    }
+
+    .valeur-texte {
+        /* On retire la superposition et on met le texte en dessous */
+        margin-top: -50px; /* Effet de légère superposition avec l'image du dessus */
+        position: relative; /* Pour que le z-index fonctionne */
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

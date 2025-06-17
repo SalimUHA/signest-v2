@@ -10,7 +10,7 @@ class AccueilController extends Controller
     {
         $carouselItems = [
             [
-                'color' => 'orange',
+                'color' => 'lightyellow',
                 'image' => 'https://picsum.photos/id/12/800/600',
                 'icon' => '/icons/signalisation.png',
                 'title' => 'Signalétique',
