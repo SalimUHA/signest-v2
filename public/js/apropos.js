@@ -1,10 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const fadeElements = document.querySelectorAll('.fade-in, .zoom-in');
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-    const observer = new IntersectionObserver(entries => {
+    if (animatedElements.length === 0) {
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('show');
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
@@ -12,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.1
     });
 
-    fadeElements.forEach(el => {
-        el.classList.add('invisible');
-        observer.observe(el);
+    animatedElements.forEach(element => {
+        observer.observe(element);
     });
 });

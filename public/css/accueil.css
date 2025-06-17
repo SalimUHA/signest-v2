@@ -13,13 +13,26 @@
     background-color: var(--fond-clair);
     overflow: hidden;
     padding: 40px 0;
-}
 
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.75s ease-in-out;
+}
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 0;
+}
 .slider {
     height: 100%;
     position: relative;
+    z-index: 1;
 }
-
 .item {
     list-style-type: none;
     position: absolute;

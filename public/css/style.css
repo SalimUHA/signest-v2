@@ -253,6 +253,7 @@ body {
     margin-top: 40px;
     border-bottom: 3px solid var(--pantone-rouge);
     text-align: center;
+    
 }
 
 .cta-banner::before {

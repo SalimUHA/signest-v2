@@ -1,0 +1,171 @@
+
+.hero-contact {
+    position: relative;
+    height: 40vh;
+    min-height: 300px;
+    background-image: url('/images/facade-signest-3.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.hero-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.hero-contact-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-contact-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.page-contact-container {
+    max-width: 1200px;
+    margin: -80px auto 60px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.info-card i {
+    font-size: 2rem;
+    color: var(--pantone-rouge);
+    margin-bottom: 15px;
+}
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+.info-card p, .info-card a {
+    font-size: 1rem;
+    color: #555;
+    text-decoration: none;
+    line-height: 1.6;
+}
+.info-card a:hover {
+    color: var(--pantone-rouge);
+}
+
+.form-map-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.bloc-formulaire h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--pantone-rouge);
+    box-shadow: 0 0 0 3px rgba(244, 0, 52, 0.2);
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.submit-button {
+    display: inline-block;
+    background-color: var(--pantone-rouge);
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.submit-button:hover {
+    background-color: #c9362f;
+    transform: translateY(-2px);
+}
+
+.bloc-map h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.map-responsive {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 8px;
+}
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+@media (max-width: 992px) {
+    .form-map-container {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .hero-contact {
+        height: 30vh;
+        min-height: 250px;
+    }
+    .hero-contact-title {
+        font-size: 2rem;
+    }
+    .page-contact-container {
+        margin-top: -60px;
+    }
+}

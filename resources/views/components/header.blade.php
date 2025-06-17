@@ -11,10 +11,13 @@
             </a>
         </div>
         <nav>
-            <a href="/accueil" class="active">Accueil</a>
-            <a href="/apropos">À propos</a>
-            <a href="/realisations">Nos réalisations</a>
+            <a href="/accueil" class="{{ (request()->is('/') || request()->is('accueil')) ? 'active' : '' }}">Accueil</a>
+            <a href="/apropos" class="{{ request()->is('apropos') ? 'active' : '' }}">À propos</a>
+            <a href="/realisations" class="{{ request()->is('realisations') ? 'active' : '' }}">Nos réalisations</a>
+            <a href="/meng" class="{{ request()->is('realisations') ? 'active' : '' }}">Meng</a>
             <a href="/contact" class="btn btn-header">Contactez-nous !</a>
+
+
         </nav>
         <div class="header-socials">
             <a href="https://www.facebook.com/p/Signest-100083348731916/" target="_blank" title="Facebook">
@@ -24,6 +27,5 @@
                 <img src="/icons/linkedin.png" alt="LinkedIn">
             </a>
         </div>
-    </div>
     </div>
 </header>

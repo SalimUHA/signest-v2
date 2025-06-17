@@ -25,7 +25,9 @@
                 <li><a href="{{ url('/accueil') }}">Accueil</a></li>
                 <li><a href="{{ url('/apropos') }}">À propos</a></li>
                 <li><a href="{{ url('/realisations') }}">Nos réalisations</a></li>
+                <li><a href="{{ url('/meng') }}">Meng</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
+
             </ul>
         </div>
         <div>
