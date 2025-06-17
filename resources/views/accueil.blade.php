@@ -23,54 +23,16 @@
 
     <section class="carousel-container">
         <ul class='slider'>
-            <li class='item orange' style="background-image: url('https://picsum.photos/id/12/800/600')">
-                <div class='content'>
-                    <img src="/icons/signalisation.png" alt="Signalétique" class="service-icon">
-                    <h2 class='title'>Signalétique</h2>
-                    <p class='description'>Nous concevons et installons des solutions de signalétique adaptées à tous types d’environnements.</p>
-                    <a href="#" class="card-button">En savoir plus</a>
-                </div>
-            </li>
-            <li class='item red' style="background-image: url('https://picsum.photos/id/1043/800/600')">
-                <div class='content'>
-                    <img src="/icons/truck.png" alt="Flocage véhicules" class="service-icon">
-                    <h2 class='title'>Flocage véhicules</h2>
-                    <p class='description'>Transformez vos véhicules en supports de communication efficaces.</p>
-                    <a href="#" class="card-button">En savoir plus</a>
-                </div>
-            </li>
-            <li class='item blue' style="background-image: url('https://picsum.photos/id/211/800/600')">
-                <div class='content'>
-                    <img src="/icons/vitrines.png" alt="Vitrines" class="service-icon">
-                    <h2 class='title'>Vitrines</h2>
-                    <p class='description'>Valorisez votre commerce avec des vitrines personnalisées et visibles.</p>
-                    <a href="#" class="card-button">En savoir plus</a>
-                </div>
-            </li>
-            <li class='item yellow' style="background-image: url('https://picsum.photos/id/219/800/600')">
-                <div class='content'>
-                    <img src="/icons/shop.png" alt="Enseignes" class="service-icon">
-                    <h2 class='title'>Enseignes</h2>
-                    <p class='description'>Création et pose d’enseignes pour sublimer vos façades commerciales.</p>
-                    <a href="#" class="card-button">En savoir plus</a>
-                </div>
-            </li>
-            <li class='item darkblue' style="background-image: url('https://picsum.photos/id/431/800/600')">
-                <div class='content'>
-                    <img src="/icons/PMR.png" alt="Accessibilité PMR" class="service-icon">
-                    <h2 class='title'>Accessibilité PMR</h2>
-                    <p class='description'>Signalétique conforme et claire pour personnes à mobilité réduite.</p>
-                    <a href="#" class="card-button">En savoir plus</a>
-                </div>
-            </li>
-            <li class='item green' style="background-image: url('https://picsum.photos/id/835/800/600')">
-                <div class='content'>
-                    <img src="/icons/route.png" alt="Marquage routier" class="service-icon">
-                    <h2 class='title'>Marquage routier</h2>
-                    <p class='description'>Marquage au sol pour organiser vos parkings et voies de circulation.</p>
-                    <a href="#" class="card-button">En savoir plus</a>
-                </div>
-            </li>
+            @foreach ($carouselItems as $item)
+                <li class='item {{ $item['color'] }}' style="background-image: url('{{ $item['image'] }}')">
+                    <div class='content'>
+                        <img src="{{ asset($item['icon']) }}" alt="{{ $item['title'] }}" class="service-icon">
+                        <h2 class='title'>{{ $item['title'] }}</h2>
+                        <p class='description'>{{ $item['description'] }}</p>
+                        <a href="#" class="card-button">En savoir plus</a>
+                    </div>
+                </li>
+            @endforeach
         </ul>
         <nav class='nav'>
             <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
@@ -86,6 +48,9 @@
         </div>
     </section>
 
+@endsection
+
+@push('scripts')
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-@endsection
+@endpush

@@ -25,5 +25,6 @@
 @include('components.footer')
 <script src="{{ asset('js/accueil.js') }}" defer></script>
 <script src="{{ asset('js/header.js') }}" defer></script>
+@stack('scripts')
 </body>
 </html>
