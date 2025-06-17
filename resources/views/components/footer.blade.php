@@ -13,7 +13,6 @@
             <p>Du lundi au jeudi<br>de 8h à 12h et de 13h15 à 17h</p>
             <p>Vendredi<br>de 8h à 12h</p>
         </div>
-        {{-- Le bloc "FORMULAIRE" qui était ici a été supprimé --}}
     </div>
 
     <div class="footer-bottom">

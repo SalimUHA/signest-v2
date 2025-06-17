@@ -6,7 +6,6 @@
     --blanc: #FFFFFF;
 }
 
-
 .topbar {
     background: #2d2d2d;
     color: white;
@@ -26,6 +25,7 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
 .topbar > * {
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ header {
     background-color: var(--gris-neutre);
     color: var(--blanc);
     height: 120px;
-    padding: 8px 40px 0; /* Ce padding empêche le contenu de coller les bords de l'écran */
+    padding: 8px 40px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,40 +44,42 @@ header {
     width: 100%;
     z-index: 999;
     border-bottom: 3px solid var(--pantone-rouge);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: height 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* C'EST ICI QUE LA MODIFICATION A LIEU */
+header.scrolled {
+    height: 80px;
+    background-color: rgba(127, 127, 127, 0.88);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 100%;
-    /* MODIFIÉ : Les lignes max-width et margin ont été supprimées pour permettre au contenu de prendre toute la largeur. */
-}
-
-header.scrolled {
-    background-color: rgba(127, 127, 127, 0.88);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-}
-
-
-.logoheader {
-    height: 80px; /* Logo agrandi */
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.logoheader:hover {
-    transform: scale(1.05);
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.logoheader {
+    height: 80px;
+    object-fit: contain;
+    transition: height 0.4s ease, transform 0.3s ease;
+}
+
+.logoheader:hover {
+    transform: scale(1.05);
+}
+
+header.scrolled .logoheader {
+    height: 55px;
 }
 
 nav {
@@ -97,6 +99,11 @@ nav a {
     transition: color 0.3s ease;
 }
 
+nav a:hover,
+nav a.active {
+    color: var(--pantone-rouge);
+}
+
 nav a::after {
     content: '';
     position: absolute;
@@ -113,7 +120,42 @@ nav a.active::after {
     width: 100%;
 }
 
-nav a:hover,
-nav a.active {
-    color: var(--pantone-rouge);
+.btn-header {
+    background-color: var(--pantone-rouge);
+    border: 2px solid var(--pantone-rouge);
+    color: var(--blanc);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-header:hover {
+    background-color: #c9362f;
+    border-color: #c9362f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-header::after {
+    display: none;
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 40px;
+}
+
+.header-socials img {
+    height: 24px;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-socials a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
 }

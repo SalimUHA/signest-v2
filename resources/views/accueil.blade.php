@@ -3,7 +3,6 @@
 @section('title', 'Accueil')
 
 @section('content')
-    {{-- SECTION HERO --}}
     <section class="hero">
         <video autoplay muted loop playsinline>
             <source src="{{ asset('videos/fond.mp4') }}" type="video/mp4">
@@ -18,14 +17,12 @@
                 Nous mettons notre savoir-faire et notre passion au service de solutions sur mesure, durables
                 pour valoriser votre image.
             </p>
-            <a href="{{ url('/contact') }}" class="btn">Contactez-nous !</a>
+            <a href="{{ url('/apropos') }}" class="btn">Nous découvrir</a>
         </div>
     </section>
 
-    {{-- SECTION DU CARROUSEL DE SERVICES --}}
     <section class="carousel-container">
         <ul class='slider'>
-            {{-- MODIFIÉ : Ajout des classes de couleur (ex: "orange") --}}
             <li class='item orange' style="background-image: url('https://picsum.photos/id/12/800/600')">
                 <div class='content'>
                     <img src="/icons/signalisation.png" alt="Signalétique" class="service-icon">
@@ -81,7 +78,6 @@
         </nav>
     </section>
 
-    {{-- DÉBUT DE LA SECTION APPEL À L'ACTION --}}
     <section class="cta-banner">
         <div class="cta-content">
             <h2 class="cta-title">Un projet en tête ?</h2>
@@ -89,12 +85,7 @@
             <a href="{{ url('/contact') }}" class="btn">Contactez-nous</a>
         </div>
     </section>
-    {{-- FIN DE LA SECTION --}}
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 @endsection
