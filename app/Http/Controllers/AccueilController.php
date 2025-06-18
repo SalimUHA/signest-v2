@@ -12,7 +12,7 @@ class AccueilController extends Controller
             [
                 'slug' => 'signaletique',
                 'color' => 'lightyellow',
-                'image' => '../images/pexels-didsss-29218000.jpg',
+                'image' => '../images/panneaux-fond.webp',
                 'icon' => '/icons/signalisation.png',
                 'title' => 'Signalétique',
                 'description' => 'Nous concevons et installons des solutions de signalétique adaptées à tous types d’environnements.',
@@ -20,7 +20,7 @@ class AccueilController extends Controller
             [
                 'slug' => 'flocage-vehicules',
                 'color' => 'red',
-                'image' => '../images/3.jpg',
+                'image' => '../images/fond-fourgon.webp',
                 'icon' => '/icons/truck.png',
                 'title' => 'Flocage véhicules',
                 'description' => 'Transformez vos véhicules en supports de communication efficaces.',
@@ -28,7 +28,7 @@ class AccueilController extends Controller
             [
                 'slug' => 'vitrines',
                 'color' => 'blue',
-                'image' => '../images/vitrines-fond.jpg',
+                'image' => '../images/vitrines-fond.webp',
                 'icon' => '/icons/vitrines.png',
                 'title' => 'Vitrines',
                 'description' => 'Valorisez votre commerce avec des vitrines personnalisées et visibles.',
@@ -36,7 +36,7 @@ class AccueilController extends Controller
             [
                 'slug' => 'enseignes',
                 'color' => 'yellow',
-                'image' => '../images/pexels-el-gringo-photo-116752370-29300402.jpg',
+                'image' => '../images/fond-cafe.webp',
                 'icon' => '/icons/shop.png',
                 'title' => 'Enseignes',
                 'description' => 'Création et pose d’enseignes pour sublimer vos façades commerciales.',
@@ -44,7 +44,7 @@ class AccueilController extends Controller
             [
                 'slug' => 'accessibilite-pmr',
                 'color' => 'darkblue',
-                'image' => '../images/pexels-jakub-pabis-147246622-11074304.jpg',
+                'image' => '../images/fond-pmr.webp',
                 'icon' => '/icons/PMR.png',
                 'title' => 'Accessibilité PMR',
                 'description' => 'Signalétique conforme et claire pour personnes à mobilité réduite.',
@@ -52,7 +52,7 @@ class AccueilController extends Controller
             [
                 'slug' => 'marquage-routier',
                 'color' => 'green',
-                'image' => '../images/pexels-mikebirdy-6584498.jpg',
+                'image' => '../images/fond-parking.webp',
                 'icon' => '/icons/route.png',
                 'title' => 'Marquage routier',
                 'description' => 'Marquage au sol pour organiser vos parkings et voies de circulation.',

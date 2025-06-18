@@ -2,6 +2,8 @@
 @section('body_class', 'page-with-hero')
 @section('title', 'Accueil')
 @section('content')
+
+
     <section class="hero">
         <video autoplay muted loop playsinline>
             <source src="{{ asset('videos/fond.mp4') }}" type="video/mp4">

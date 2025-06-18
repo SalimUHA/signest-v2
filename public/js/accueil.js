@@ -21,11 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (slider && carouselContainer && nav) {
 
+        // MODIFIÉ : On revient à la lecture du style en ligne
         const updateContainerBackground = () => {
             const mainCard = slider.querySelector('.item:nth-child(2)');
             if (mainCard) {
                 const newBackgroundImage = mainCard.style.backgroundImage;
-                carouselContainer.style.backgroundImage = newBackgroundImage;
+                if (newBackgroundImage) {
+                    carouselContainer.style.backgroundImage = newBackgroundImage;
+                }
             }
         };
 

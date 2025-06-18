@@ -8,14 +8,26 @@
         <div class="hero-service-content">
             <h1 class="hero-service-title">{{ $service['title'] }}</h1>
         </div>
-
-
     </section>
 
     <section class="service-intro-section">
         <div class="service-intro-grid">
-            <div class="service-description animate-on-scroll">
-                <p>{{ $service['description'] }}</p>
+            <div class="service-description">
+                @foreach($service['description'] as $index => $block)
+                    @if($block['type'] === 'paragraph')
+                        <p class="animate-on-scroll" style="transition-delay: {{ $index * 100 }}ms;">{{ $block['content'] }}</p>
+                    @elseif($block['type'] === 'heading')
+                        <h4 class="animate-on-scroll" style="transition-delay: {{ $index * 100 }}ms;">{{ $block['content'] }}</h4>
+                    @elseif($block['type'] === 'list')
+                        <ul class="service-description-list">
+                            @foreach($block['items'] as $itemIndex => $item)
+                                <li class="animate-on-scroll" style="transition-delay: {{ ($index * 100) + ($itemIndex * 50) }}ms;">
+                                    <p><strong>{{ $item['title'] }}:</strong> {{ $item['description'] }}</p>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                @endforeach
             </div>
 
             @if(!empty($service['key_benefits']))
