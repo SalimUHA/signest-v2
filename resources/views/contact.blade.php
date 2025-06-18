@@ -13,6 +13,21 @@
     <div class="page-contact-container">
 
         <div class="contact-info-grid">
+            <div class="info-card animate-on-scroll" style="transition-delay: 100ms;">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>Notre Adresse</h3>
+                <p>5 rue de Séville<br>68300 Saint-Louis</p>
+            </div>
+            <div class="info-card animate-on-scroll" style="transition-delay: 250ms;">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Par Téléphone</h3>
+                <p><a href="tel:0389705424">03 89 70 54 24</a></p>
+            </div>
+            <div class="info-card animate-on-scroll" style="transition-delay: 400ms;">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Par Email</h3>
+                <p><a href="mailto:pc@signest68.com">pc@signest68.com</a></p>
+            </div>
         </div>
 
         <div class="form-map-container animate-on-scroll">

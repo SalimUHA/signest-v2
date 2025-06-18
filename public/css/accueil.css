@@ -13,7 +13,6 @@
     background-color: var(--fond-clair);
     overflow: hidden;
     padding: 40px 0;
-
     background-size: cover;
     background-position: center;
     transition: background-image 0.75s ease-in-out;
@@ -98,8 +97,8 @@
 }
 .item:nth-child(2) {
     left: 5%;
-    width: 45%;
-    height: 90%;
+    width: 40%;
+    height: 85%;
     z-index: 2;
 }
 .item:nth-child(3) {
@@ -174,17 +173,32 @@
 .item:nth-child(2) .content .card-button {
     margin-top: auto;
     padding: 12px 24px;
-    background-color: var(--gris-neutre);
-    color: var(--blanc);
+    background-color: transparent;
+    color: var(--pantone-rouge);
+    border: 2px solid var(--pantone-rouge);
     border-radius: 8px;
     font-weight: 600;
     font-size: 16px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .item:nth-child(2) .content .card-button:hover {
     background-color: var(--pantone-rouge);
+    color: var(--blanc);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(239, 35, 60, 0.3);
+}
+
+.card-button .arrow-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-button:hover .arrow-icon {
+    transform: translateX(5px);
 }
 
 .item:nth-child(n+3) .content {

@@ -1,4 +1,3 @@
-
 .hero-contact {
     position: relative;
     height: 40vh;
@@ -51,16 +50,16 @@
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 .info-card i {
     font-size: 2rem;
     color: var(--pantone-rouge);
     margin-bottom: 15px;
-}
-.info-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #333;
 }
 .info-card p, .info-card a {
     font-size: 1rem;
@@ -167,5 +166,30 @@
     }
     .page-contact-container {
         margin-top: -60px;
+    }
+}
+
+
+.info-card.is-visible i {
+    animation: float-animation 3s ease-in-out infinite;
+}
+
+.info-card:nth-child(2).is-visible i {
+    animation-delay: 0.3s;
+}
+
+.info-card:nth-child(3).is-visible i {
+    animation-delay: 0.6s;
+}
+
+@keyframes float-animation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

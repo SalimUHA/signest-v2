@@ -42,8 +42,6 @@ body {
     background-color: #c9362f;
 }
 
-/* --- Section Hero --- */
-
 .hero {
     position: relative;
     height: 100vh;
@@ -106,8 +104,6 @@ body {
     font-size: 18px;
     border-radius: 14px;
 }
-
-/* --- Sections Contenu & Services --- */
 
 .transition-section {
     background-color: var(--fond-clair);
@@ -242,18 +238,15 @@ body {
     box-shadow: 0 0 12px rgba(231, 67, 60, 0.5);
 }
 
-/* --- Section Appel à l'Action (CTA) --- */
-
 .cta-banner {
     position: relative;
     overflow: hidden;
     color: var(--blanc);
     padding: 120px 40px;
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-    margin-top: 40px;
+    margin-top: 0;
     border-bottom: 3px solid var(--pantone-rouge);
     text-align: center;
-    
 }
 
 .cta-banner::before {
@@ -315,8 +308,6 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
-
-/* --- Animations & Utilitaires --- */
 
 .spacer {
     height: 150px;

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Logique pour les cartes qui apparaissent au scroll ---
     const cards = document.querySelectorAll('.feature-card');
     if (cards.length > 0) {
         const observer = new IntersectionObserver(entries => {
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         cards.forEach(card => observer.observe(card));
     }
 
-    // --- Logique du Carrousel ---
     const carouselContainer = document.querySelector('.carousel-container');
     const slider = document.querySelector('.slider');
     const nav = document.querySelector('.nav');
@@ -23,13 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (slider && carouselContainer && nav) {
 
-        // NOUVELLE FONCTION : Met à jour l'arrière-plan du conteneur
         const updateContainerBackground = () => {
             const mainCard = slider.querySelector('.item:nth-child(2)');
             if (mainCard) {
-                // Récupère l'URL de l'image de fond de la carte principale
                 const newBackgroundImage = mainCard.style.backgroundImage;
-                // Applique cette image au conteneur du carrousel
                 carouselContainer.style.backgroundImage = newBackgroundImage;
             }
         };
@@ -38,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const items = slider.querySelectorAll('.item');
             if (items.length > 1) {
                 slider.append(items[0]);
-                updateContainerBackground(); // MISE A JOUR du fond
+                updateContainerBackground();
             }
         };
 
@@ -46,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const items = slider.querySelectorAll('.item');
             if (items.length > 1) {
                 slider.prepend(items[items.length - 1]);
-                updateContainerBackground(); // MISE A JOUR du fond
+                updateContainerBackground();
             }
         };
 
@@ -65,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // On stoppe puis relance l'autoscroll lors d'un clic manuel
             stopAutoScroll();
             if (button.classList.contains('next')) {
                 nextSlide();

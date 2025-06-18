@@ -1,5 +1,5 @@
 @extends('layouts.base')
-
+@section('body_class', 'page-with-hero')
 @section('title', 'Accueil')
 @section('content')
     <section class="hero">
@@ -28,7 +28,7 @@
                         <img src="{{ asset($item['icon']) }}" alt="{{ $item['title'] }}" class="service-icon">
                         <h2 class='title'>{{ $item['title'] }}</h2>
                         <p class='description'>{{ $item['description'] }}</p>
-                        <a href="#" class="card-button">En savoir plus</a>
+                        <a href="{{ url('/service/' . $item['slug']) }}" class="card-button">En savoir plus <span class="arrow-icon">→</span></a>
                     </div>
                 </li>
             @endforeach

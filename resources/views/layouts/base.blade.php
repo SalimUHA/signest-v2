@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
     <link rel="stylesheet" href="{{ asset('css/apropos.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/service.css') }}">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
