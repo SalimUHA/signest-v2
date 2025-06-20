@@ -54,7 +54,7 @@ class AccueilController extends Controller
                 'color' => 'green',
                 'image' => '../images/fond-parking.webp',
                 'icon' => '/icons/route.png',
-                'title' => 'Marquage routier',
+                'title' => 'Marquage au sol',
                 'description' => 'Marquage au sol pour organiser vos parkings et voies de circulation.',
             ],
         ];
