@@ -42,12 +42,12 @@ class AccueilController extends Controller
                 'description' => 'Création et pose d’enseignes pour sublimer vos façades commerciales.',
             ],
             [
-                'slug' => 'accessibilite-pmr',
+                'slug' => 'coverstyl',
                 'color' => 'darkblue',
-                'image' => '../images/fond-pmr.webp',
-                'icon' => '/icons/PMR.png',
-                'title' => 'Accessibilité PMR',
-                'description' => 'Signalétique conforme et claire pour personnes à mobilité réduite.',
+                'image' => '../images/fond-bois.webp',
+                'icon' => '/icons/coverstyl.png',
+                'title' => 'Cover Styl',
+                'description' => 'Application de vinyles adhésifs sur toutes surfaces : murs, portes, meubles.',
             ],
             [
                 'slug' => 'marquage-routier',

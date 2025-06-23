@@ -66,19 +66,14 @@ class ServiceController extends Controller
                     [
                         'title' => 'E.Leclerc',
                         'image' => '../images/panneaux-leclerc.jpeg',
-                        'description' => 'Conception d\'un panneau d\'information avec du vinyle et de l\'impression'
+                        'description' => 'Conception d\'un panneau d\'information avec du vinyle et de l\'impression.'
                     ],
                     [
                         'title' => 'Communauté Thann/Cernay',
                         'image' => '../images/signalisation-exterieur.jpeg',
-                        'description' => 'Conception de la signéalétique extérieur de la zone industrielle de Thann/Cernay en mettant
-                        en place plusieurs panneaux directionnel.'
+                        'description' => 'Conception de la signéalétique extérieur de la zone industrielle de Thann/Cernay en mettant en place plusieurs panneaux directionnels.'
                     ],
-                    [
-                        'title' => 'Test',
-                        'image' => 'https://picsum.photos/id/25/800/600',
-                        'description' => ' description test'
-                    ]
+
                 ]
             ],
             [
@@ -123,8 +118,7 @@ class ServiceController extends Controller
                     [
                         'title' => 'Auto-Ecole Abbatucci',
                         'image' => '../images/abbatuci-flocage.jpeg',
-                        'description' => ' Marquage d\'un véhicule type Audi A1 avec le logo et les cordonnées de l\'entreprise (
-                        mail, numéro de téléphone ).'
+                        'description' => 'Marquage d\'un véhicule type Audi A1 avec le logo et les cordonnées de l\'entreprise (mail, numéro de téléphone).'
                     ],
                     [
                         'title' => 'Garage Zagula',
@@ -134,14 +128,10 @@ class ServiceController extends Controller
                     [
                         'title' => 'Mondial Piscine',
                         'image' => '../images/3.jpg',
-                        'description' => 'Marquage traditionnel d\'un véhicule de type Renault Master avec le logo, site internet et
-                        coordonnées mobiles
-
-
-'
+                        'description' => 'Marquage traditionnel d\'un véhicule de type Renault Master avec le logo, site internet et coordonnées mobiles.'
                     ]
                 ],
-                ],
+            ],
 
             [
                 'slug' => 'vitrines',
@@ -185,36 +175,102 @@ class ServiceController extends Controller
                     [
                         'title' => 'La Cafetière',
                         'image' => '../images/vitrines-lacafetiere.jpg',
-                        'description' => ' Vitrines contenant de la lettre collée'
+                        'description' => 'Vitrines contenant de la lettre collée.'
                     ],
                     [
                         'title' => 'Agence de voyage Selectour',
                         'image' => '../images/vitrine-microperf.png',
-                        'description' => ' Vitrines contenant du vinyle microperforée.'
+                        'description' => 'Vitrines contenant du vinyle microperforée.'
                     ],
                     [
                         'title' => 'EBY Services Serrure & clef',
                         'image' => '../images/5.jpg',
-                        'description' => 'Vitrines contenant de l\'adhésif dépoli qui permettent de pacifier partiellement l\'intérieur
-                        couplés à de la lettre collée.'
+                        'description' => 'Vitrines contenant de l\'adhésif dépoli qui permettent de pacifier partiellement l\'intérieur couplés à de la lettre collée.'
                     ]
                 ],
             ],
             [
                 'slug' => 'enseignes',
-                'title' => 'Enseignes',
-                'image' => 'https://picsum.photos/id/219/1200/800',
-                'description' => [['type' => 'paragraph', 'content' => 'Description à venir...']],
-                'key_benefits' => [],
-                'portfolio_examples' => []
+                'title' => 'Enseignes de Façade',
+                'image' => '../images/fond-bois.webp',
+                'description' => [
+                    [
+                        'type' => 'paragraph',
+                        'content' => 'L\'enseigne est la première impression que vous donnez. C\'est un élément essentiel de votre identité visuelle qui doit attirer l\'œil et informer les passants. Chez Signest, nous concevons, fabriquons et posons des enseignes de façade sur mesure, pensées pour valoriser votre image et garantir votre visibilité. Chaque projet est unique et adapté à votre charte graphique, à l\'architecture de votre bâtiment et à votre budget.'
+                    ],
+                    [
+                        'type' => 'heading',
+                        'content' => 'Nos Types d\'Enseignes de Façade'
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            ['title' => 'Enseignes Lumineuses (LED)', 'description' => 'Pour une visibilité optimale de jour comme de nuit. Nous proposons des lettres boîtiers à éclairage direct (par l\'avant) ou en rétro-éclairage (halo lumineux à l\'arrière) pour un effet plus élégant et subtil.'],
+                            ['title' => 'Panneaux d\'Enseigne', 'description' => 'Une solution classique, polyvalente et économique. Le panneau, généralement en Dibond, est imprimé avec votre logo et vos informations. Il peut être plat ou plié pour former un caisson, s\'adaptant à de nombreuses configurations.'],
+                            ['title' => 'Enseignes Drapeau', 'description' => 'Perpendiculaires à la façade, elles captent le regard des piétons dans les rues commerçantes. Lumineuses ou non, elles sont un excellent complément à votre enseigne principale pour une visibilité accrue.']
+                        ]
+                    ]
+                ],
+                'key_benefits' => [
+                    'Visibilité maximale pour votre commerce ou entreprise',
+                    'Conception 100% sur mesure : formes, couleurs et matériaux',
+                    'Solutions lumineuses (LED) pour être vu de jour comme de nuit',
+                    'Matériaux durables et résistants aux intempéries',
+                    'Pose sécurisée sur tous types de façades par notre équipe'
+                ],
+                'portfolio_examples' => [
+                    [
+                        'title' => 'Boulangerie Parlons Pains',
+                        'image' => '../images/2.jpg',
+                        'description' => 'Création d\'une enseigne bandeau complète avec habillage de façade, lettrage et logos.'
+                    ],
+                    [
+                        'title' => 'Brasserie La Bicephale',
+                        'image' => '../images/la-bicephale.jpeg',
+                        'description' => 'Pose de lettres découpées et d\'un logo directement sur la façade du bâtiment.'
+                    ],
+                    [
+                        'title' => 'Institut Mel - Soins & Beauté',
+                        'image' => '../images/institutmel.jpeg',
+                        'description' => 'Fabrication et pose d\'un panneau d\'enseigne type bandeau en Dibond avec impression numérique.'
+                    ]
+                ]
             ],
             [
-                'slug' => 'accessibilite-pmr',
-                'title' => 'Accessibilité PMR',
-                'image' => 'https://picsum.photos/id/431/1200/800',
-                'description' => [['type' => 'paragraph', 'content' => 'Description à venir...']],
-                'key_benefits' => [],
-                'portfolio_examples' => []
+                'slug' => 'coverstyl',
+                'title' => 'Rénovation Adhésive (Cover Styl\')',
+                'image' => '../images/fond-bois.webp',
+                'description' => [
+                    [
+                        'type' => 'paragraph',
+                        'content' => 'Donnez une seconde vie à vos intérieurs sans les contraintes des gros travaux. Chez Signest, nous sommes spécialisés dans la pose de revêtements adhésifs Cover Styl\', une solution innovante pour moderniser votre mobilier, vos portes ou vos comptoirs. Offrez-vous une rénovation rapide, économique et au rendu impeccable, avec un large choix de finitions réalistes (bois, marbre, métal, cuir, etc.).'
+                    ],
+                    [
+                        'type' => 'heading',
+                        'content' => 'Nos applications pour la rénovation adhésive'
+                    ],
+                    [
+                        'type' => 'list',
+                        'items' => [
+                            ['title' => 'Mobilier et Agencement', 'description' => 'Modernisez vos bureaux, comptoirs d\'accueil, étagères, et placards. C\'est la solution idéale pour les hôtels, restaurants et boutiques souhaitant renouveler leur look à moindre coût.'],
+                            ['title' => 'Portes et Huisseries', 'description' => 'Ne remplacez plus vos portes ! Nous les habillons avec la finition de votre choix pour une intégration parfaite dans votre nouvelle décoration intérieure.'],
+                            ['title' => 'Cuisines et Salles de bain', 'description' => 'Recouvrez les façades de vos placards de cuisine ou les meubles de salle de bain. Nos films sont résistants à l\'humidité et faciles à nettoyer, garantissant un résultat esthétique et durable.']
+                        ]
+                    ]
+                ],
+                'key_benefits' => [
+                    'Rénovation rapide et sans poussière',
+                    'Alternative économique au remplacement de mobilier',
+                    'Résistant à l\'eau, aux rayures et facile d\'entretien',
+                    'Pose experte pour un rendu parfait, sans bulle ni raccord visible'
+                ],
+                'portfolio_examples' => [
+                    [
+                        'title' => 'Rénovation d\'un îlot de cuisine',
+                        'image' => '../images/coverstyl-particulier.jpeg',
+                        'description' => 'Habillage des façades et du plan de travail d\'un îlot de cuisine avec un revêtement adhésif effet bois naturel.'
+                    ],
+                ]
             ],
             [
                 'slug' => 'marquage-routier',
