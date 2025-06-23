@@ -15,3 +15,5 @@ Route::get('/contact', [ContactController::class, 'show'])->name('contact.show')
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');//Page Contact
 
 Route::get('/service/{slug}', [ServiceController::class, 'show'])->name('service.show'); //Pages pour les cartes
+
+Route::get('/realisations', [App\Http\Controllers\RealisationsController::class, 'index'])->name('realisations'); //realisations

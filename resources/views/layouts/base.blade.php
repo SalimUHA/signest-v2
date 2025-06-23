@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('css/apropos.css') }}">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/service.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/realisations.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -33,6 +35,11 @@
 <script src="{{ asset('js/header.js') }}" defer></script>
 <script src="{{ asset('js/apropos.js') }}" defer></script>
 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind("[data-fancybox]", {
+    });
+</script>
 @stack('scripts')
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <section class="hero-service" style="background-image: url('{{ $service['image'] }}');">
+    <section class="hero-service" style="background-image: url('{{ asset($service['image']) }}');">
         <div class="hero-service-content">
             <h1 class="hero-service-title">{{ $service['title'] }}</h1>
         </div>
@@ -55,7 +55,7 @@
                 @foreach($service['portfolio_examples'] as $example)
                     <div class="portfolio-card {{ $loop->even ? 'reverse' : '' }} animate-on-scroll">
                         <div class="portfolio-image">
-                            <img src="{{ $example['image'] }}" alt="Réalisation : {{ $example['title'] }}">
+                            <img src="{{ asset($example['image']) }}" alt="Réalisation : {{ $example['title'] }}">
                         </div>
                         <div class="portfolio-content">
                             <h3>{{ $example['title'] }}</h3>
