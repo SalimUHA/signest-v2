@@ -10,7 +10,7 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class RealisationsController extends Controller
 {
-    // ▼▼▼ FONCTION INDEX MISE À JOUR ▼▼▼
+
     public function index()
     {
         $expertises = $this->getExpertiseData();
@@ -58,6 +58,7 @@ class RealisationsController extends Controller
             ['title' => 'Fybat', 'image' => 'images/fybat-flocage.jpeg', 'category' => 'Vehicules'],
             ['title' => 'SCATP', 'image' => 'images/scatp-flocage.jpeg', 'category' => 'Vehicule'],
             ['title' => 'Bricolage E.Leclerc', 'image' => 'images/panneau-brico.jpeg', 'category' => 'Panneau'],
+            ['title' => 'Panneau', 'image' => 'images/panneau-videosurveillance.jpg', 'category' => 'Panneau'],
         ];
     }
 

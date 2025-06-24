@@ -1,0 +1,94 @@
+.meng-page {
+    color: #333;
+    background-color: #fff;
+}
+
+.meng-hero {
+    background-color: var(--fond-clair, #f2f2f2);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.meng-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.meng-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--pantone-rouge, #f40034);
+    margin-bottom: 24px;
+}
+
+.meng-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--texte, #7f7f7f);
+    margin-bottom: 16px;
+}
+
+.meng-products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.meng-products h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.product-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.product-image-placeholder {
+    height: 220px;
+    background-color: #e9ecef;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.meng-cta {
+    background-color: var(--gris-neutre, #7f7f7f);
+    color: #fff;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.meng-cta h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.meng-cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}

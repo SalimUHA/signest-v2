@@ -44,7 +44,7 @@
             <div class="gallery-grid">
                 @forelse($projets as $projet)
                     <div class="gallery-item animate-on-scroll slide-up" style="transition-delay: {{ ($loop->index % 9) * 50 }}ms">
-                        {{-- On entoure l'image avec un lien pour Fancybox --}}
+
                         <a href="{{ asset($projet['image']) }}" data-fancybox="gallery" data-caption="{{ $projet['title'] }}">
                             <img src="{{ asset($projet['image']) }}" alt="{{ $projet['title'] }}">
                         </a>

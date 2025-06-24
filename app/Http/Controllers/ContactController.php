@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\ContactMail; // Assurez-vous d'avoir créé ce Mail (php artisan make:mail ContactMail)
+use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -15,7 +15,6 @@ class ContactController extends Controller
 
     public function send(Request $request)
     {
-        // On valide maintenant 'prenom' et 'nom' comme deux champs obligatoires
         $validated = $request->validate([
             'prenom'    => 'required|string|max:50',
             'nom'       => 'required|string|max:50',

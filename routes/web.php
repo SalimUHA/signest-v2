@@ -5,6 +5,7 @@ use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\AproposController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\MengController;
 
 Route::get('/accueil', [AccueilController::class, 'index']); //Page d'accueil
 Route::get('/', [AccueilController::class, 'index']); //Page d'accueil
@@ -17,3 +18,4 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
 Route::get('/service/{slug}', [ServiceController::class, 'show'])->name('service.show'); //Pages pour les cartes
 
 Route::get('/realisations', [App\Http\Controllers\RealisationsController::class, 'index'])->name('realisations'); //realisations
+Route::get('/meng', [MengController::class, 'index']);

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/service.css') }}">
     <link rel="stylesheet" href="{{ asset('css/realisations.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/meng.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
 
@@ -38,7 +39,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script>
     Fancybox.bind("[data-fancybox]", {
-    });
+    }); //box pour les bas de page dans réalisation
 </script>
 @stack('scripts')
 </body>

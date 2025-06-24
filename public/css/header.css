@@ -85,19 +85,19 @@ header.scrolled .logoheader {
 nav {
     display: flex;
     align-items: center;
-    gap: 20px; /* J'ai réduit le gap pour que les boutons rentrent mieux */
+    gap: 20px;
 }
 
 nav a {
     font-family: 'Urbanist', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: var(--blanc); /* Couleur mise en blanc pour régler le problème d'affichage */
+    color: var(--blanc);
     text-decoration: none;
     padding: 6px 12px;
     position: relative;
     transition: color 0.3s ease;
-    white-space: nowrap; /* Empêche le texte des boutons de passer à la ligne */
+    white-space: nowrap;
 }
 
 nav a:hover,
@@ -161,7 +161,6 @@ nav a.active::after {
     transform: scale(1.1);
 }
 
-/* styles sans bordure gris a ajouter sur les pages blades si on le souhaite */
 .page-with-hero header {
     background-color: transparent;
     border-bottom-color: transparent;
