@@ -358,7 +358,11 @@ class RealisationsController extends Controller
                         'image' => 'images/coverstyl-particulier.jpeg',
                         'description' => 'Habillage des façades et du plan de travail d\'un îlot de cuisine avec un revêtement adhésif effet bois naturel.'
                     ],
-                ]
+
+                    ['title' => 'Rénovation d\'une table',
+                    'image' => 'images/table-coverstyle.jpeg',
+                        'description' => 'Habillage d\'une table à salle à manger effet bois.']
+                ],
             ],
             [
                 'slug' => 'marquage-routier',
