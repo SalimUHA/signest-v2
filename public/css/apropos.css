@@ -1,3 +1,10 @@
+:root {
+    --equipe-color-1: #4da667;
+    --equipe-color-2: #f6cf64;
+    --equipe-color-3: #a9accd;
+    --equipe-color-4: #e0e0e0;
+}
+
 .hero-apropos {
     position: relative;
     height: 50vh;
@@ -221,46 +228,99 @@
     max-width: 220px;
 }
 
-.equipe-grille {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+.equipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    align-items: flex-end;
+    min-height: 300px;
+    padding-bottom: 5rem;
 }
 
-.carte-membre {
-    background: #fff;
-    border-radius: 12px;
-    text-align: center;
-    padding: 30px 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.img-wrap {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    transition: 400ms all;
+    position: relative;
+    animation-name: wobble;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.carte-membre:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+.img-wrap img {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    transition: 300ms all;
 }
 
-.carte-membre img {
+.img-wrap:hover {
+    width: 150px;
+    height: 150px;
+}
+
+.img-wrap:nth-of-type(4n+1):hover {
+    background-color: var(--equipe-color-1);
+}
+.img-wrap:nth-of-type(4n+2):hover {
+    background-color: var(--equipe-color-2);
+}
+.img-wrap:nth-of-type(4n+3):hover {
+    background-color: var(--equipe-color-3);
+}
+.img-wrap:nth-of-type(4n+4):hover {
+    background-color: var(--equipe-color-4);
+}
+
+.img-wrap:hover img {
     width: 140px;
     height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 20px;
-    border: 5px solid var(--fond-clair);
+    box-shadow: 0 0 0 5px white;
 }
 
-.carte-membre h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
+.membre-info {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms, visibility 300ms;
+}
+
+.img-wrap:hover .membre-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+.membre-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
     color: #333;
+    margin: 0;
 }
 
-.carte-membre p {
+.membre-info span {
     font-size: 1rem;
     color: var(--pantone-rouge);
     font-weight: 500;
+}
+
+@keyframes wobble {
+    25% { transform: rotate(4deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(1deg); }
 }
 
 .logos-scroller {

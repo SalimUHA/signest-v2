@@ -45,13 +45,18 @@
 
         <div class="bloc-section equipe">
             <h2 class="titre-section center animate-on-scroll">Notre équipe</h2>
-            <p class="sous-titre-section animate-on-scroll" style="transition-delay: 100ms;"></p>
-            <div class="equipe-grille">
+            <p class="sous-titre-section animate-on-scroll" style="transition-delay: 100ms;">Passez la souris sur un membre de l'équipe</p>
+            <div class="equipe-container">
                 @foreach($equipe as $membre)
-                    <div class="carte-membre animate-on-scroll" style="transition-delay: {{ $loop->index * 150 }}ms;">
-                        <img src="{{ asset($membre['photo']) }}" alt="Photo de {{ $membre['nom'] }}">
-                        <h3>{{ $membre['nom'] }}</h3>
-                        <p>{{ $membre['poste'] }}</p>
+                    <div class="img-wrap animate-on-scroll"
+                         style="transition-delay: {{ $loop->index * 100 }}ms; animation-delay: {{ ($loop->index % 5) * 0.8 }}s"
+                         data-nom="{{ $membre['nom'] }}"
+                         data-poste="{{ $membre['poste'] }}">
+                        <img src="{{ $membre['avatar'] }}" alt="{{ $membre['nom'] }}">
+                        <div class="membre-info">
+                            <h3>{{ $membre['nom'] }}</h3>
+                            <span>{{ $membre['poste'] }}</span>
+                        </div>
                     </div>
                 @endforeach
             </div>
