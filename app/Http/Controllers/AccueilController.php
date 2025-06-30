@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class AccueilController extends Controller
 {
-    public function index()
+    private function getServicesData(): array
     {
-        $carouselItems = [
+        return [
             [
                 'slug' => 'signaletique',
                 'color' => 'lightyellow',
@@ -58,8 +58,19 @@ class AccueilController extends Controller
                 'description' => 'Marquage au sol pour organiser vos parkings et voies de circulation.',
             ],
         ];
+    }
+
+    public function index()
+    {
         return view('accueil', [
-            'carouselItems' => $carouselItems
+            'carouselItems' => $this->getServicesData()
+        ]);
+    }
+
+    public function servicesPage()
+    {
+        return view('nosservices', [
+            'services' => $this->getServicesData()
         ]);
     }
 }

@@ -65,7 +65,7 @@ body {
     z-index: 1;
 }
 
-.hero video {
+.hero-background-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -179,7 +179,6 @@ body {
 .feature-card.lightyellow::before {
     background-color: #FFEE00;
 }
-
 
 .service-icon {
     display: flex;

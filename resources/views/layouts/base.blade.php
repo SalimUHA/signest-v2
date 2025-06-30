@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/service.css') }}">
     <link rel="stylesheet" href="{{ asset('css/realisations.css') }}">
     <link rel="stylesheet" href="{{ asset('css/meng.css') }}">
+    <link rel="stylesheet" href="{{asset('css/nosservices.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
 
@@ -35,6 +36,7 @@
 <script src="{{ asset('js/accueil.js') }}" defer></script>
 <script src="{{ asset('js/header.js') }}" defer></script>
 <script src="{{ asset('js/apropos.js') }}" defer></script>
+<script src="{{ asset('js/services.js') }}" defer></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script>

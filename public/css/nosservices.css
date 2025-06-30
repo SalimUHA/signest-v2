@@ -1,0 +1,129 @@
+.services-hero {
+    position: relative;
+    padding: 120px 20px 80px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: var(--blanc);
+    overflow: hidden;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/fond-atelier.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    filter: grayscale(80%);
+    z-index: 1;
+}
+
+.services-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.services-hero-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--pantone-rouge);
+    text-shadow: 0 0 15px rgba(244, 0, 52, 0.4);
+}
+
+.services-hero-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.highlight-section {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.highlight-section.bg-light {
+    background-color: var(--fond-clair);
+}
+
+.highlight-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.highlight-container.reverse {
+    direction: rtl;
+}
+
+.highlight-container.reverse > * {
+    direction: ltr;
+}
+
+.highlight-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.highlight-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.highlight-image:hover img {
+    transform: scale(1.05);
+}
+
+.highlight-content {
+    animation: slideFade 1s ease-out both;
+}
+
+.highlight-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2.5rem;
+    color: var(--pantone-rouge);
+    margin-bottom: 1.5rem;
+}
+
+.highlight-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.highlight-content .btn {
+    margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .highlight-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-hero-title {
+        font-size: 2.8rem;
+    }
+    .services-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .highlight-title {
+        font-size: 2rem;
+    }
+}

@@ -3,12 +3,8 @@
 @section('title', 'Accueil')
 @section('content')
 
-
     <section class="hero">
-        <video autoplay muted loop playsinline>
-            <source src="{{ asset('videos/fond.mp4') }}" type="video/mp4">
-            Votre navigateur ne supporte pas la vidéo HTML5.
-        </video>
+        <img src="{{ asset('images/facade-signest-2.jpeg') }}" alt="Arrière-plan d'un café" class="hero-background-image">
         <div class="hero-content">
             <h1 class="hero-title">SIGNEST</h1>
             <p class="hero-subtitle">

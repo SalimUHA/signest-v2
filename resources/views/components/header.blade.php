@@ -13,6 +13,7 @@
         <nav>
             <a href="/accueil" class="{{ (request()->is('/') || request()->is('accueil')) ? 'active' : '' }}">Accueil</a>
             <a href="/apropos" class="{{ request()->is('apropos') ? 'active' : '' }}">À propos</a>
+            <a href="/nosservices" class="{{ request()->is('nosservices') ? 'active' : '' }}">Services</a>
             <a href="/realisations" class="{{ request()->is('realisations') ? 'active' : '' }}">Nos réalisations</a>
             <a href="/meng" class="{{ request()->is('meng') ? 'active' : '' }}">Meng</a>
             <a href="/contact" class="btn btn-header">Contactez-nous !</a>

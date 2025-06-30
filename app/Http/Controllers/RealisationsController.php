@@ -74,7 +74,7 @@ class RealisationsController extends Controller
             ],
             [
                 'slug' => 'marquage-publicitaire',
-                'title' => 'Marquage Publicitaire sur Véhicules',
+                'title' => 'Comunication sur Bus (Partenaire avec MetroCars)',
                 'icon' => 'fa-solid fa-bus',
                 'description' => 'Nous réalisons des campagnes publicitaires à fort impact, notamment sur les arrières de bus ("cul de bus"), une surface de choix pour toucher un large public dans l\'environnement urbain.',
                 'example_images' => ['images/dos-bus.jpeg']
