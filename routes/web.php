@@ -41,6 +41,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('/services/{service}/edit', [AdminServiceController::class, 'edit'])->name('services.edit');
     Route::patch('/services/{service}', [AdminServiceController::class, 'update'])->name('services.update');
     Route::delete('/services/{service}', [AdminServiceController::class, 'destroy'])->name('services.destroy');
+    Route::get('/services/{service}/content', [AdminServiceController::class, 'getPageContent'])->name('services.content');
 });
 
 /*

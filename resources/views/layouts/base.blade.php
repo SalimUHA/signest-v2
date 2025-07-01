@@ -39,6 +39,7 @@
 <script src="{{ asset('js/services.js') }}" defer></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script>
     Fancybox.bind("[data-fancybox]", {
     });
