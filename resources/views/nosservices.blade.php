@@ -27,18 +27,19 @@
     </section>
 
     @foreach ($services as $service)
-        @if ($service['slug'] !== 'signaletique')
+        @if ($service->slug !== 'signaletique')
             <section class="highlight-section {{ $loop->even ? 'bg-light' : '' }}">
                 <div class="highlight-container {{ $loop->even ? 'reverse' : '' }}">
                     <div class="highlight-image">
-                        <img src="{{ asset($service['image']) }}" alt="{{ $service['title'] }}">
+                        {{-- CORRECTION : On utilise asset() directement --}}
+                        <img src="{{ asset($service->image) }}" alt="{{ $service->title }}">
                     </div>
                     <div class="highlight-content">
-                        <h2 class="highlight-title">{{ $service['title'] }}</h2>
+                        <h2 class="highlight-title">{{ $service->title }}</h2>
                         <p>
-                            {{ $service['description'] }}
+                            {{ $service->description }}
                         </p>
-                        <a href="{{ url('/service/' . $service['slug']) }}" class="btn">En savoir plus sur ce service</a>
+                        <a href="{{ url('/service/' . $service->slug) }}" class="btn">En savoir plus sur ce service</a>
                     </div>
                 </div>
             </section>

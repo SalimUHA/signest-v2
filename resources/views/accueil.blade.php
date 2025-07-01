@@ -21,12 +21,12 @@
     <section class="carousel-container">
         <ul class='slider'>
             @foreach ($carouselItems as $item)
-                <li class='item {{ $item['color'] }}' style="background-image: url('{{ $item['image'] }}')">
+                <li class='item {{ $item->color }}' style="background-image: url('{{ asset($item->image) }}')">
                     <div class='content'>
-                        <img src="{{ asset($item['icon']) }}" alt="{{ $item['title'] }}" class="service-icon">
-                        <h2 class='title'>{{ $item['title'] }}</h2>
-                        <p class='description'>{{ $item['description'] }}</p>
-                        <a href="{{ url('/service/' . $item['slug']) }}" class="card-button">En savoir plus <span class="arrow-icon">→</span></a>
+                        <img src="{{ asset($item->icon) }}" alt="{{ $item->title }}" class="service-icon">
+                        <h2 class='title'>{{ $item->title }}</h2>
+                        <p class='description'>{{ $item->description }}</p>
+                        <a href="{{ url('/service/' . $item->slug) }}" class="card-button">En savoir plus <span class="arrow-icon">→</span></a>
                     </div>
                 </li>
             @endforeach

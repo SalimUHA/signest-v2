@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+use App\Models\Service; // On importe le modèle Service
 
 class ServiceController extends Controller
 {
+    /**
+     * Affiche la page de détail d'un service.
+     */
     public function show($slug)
     {
-        $realisationsController = new RealisationsController();
-        $services = $realisationsController->getServicesData();
+        // Trouve le service dans la base de données par son slug.
+        // S'il ne le trouve pas, il renvoie automatiquement une erreur 404.
+        $service = Service::where('slug', $slug)->firstOrFail();
 
-        $service = Arr::first($services, fn ($value) => $value['slug'] === $slug);
-
-        if (!$service) {
-            abort(404);
-        }
-
+        // Renvoie la vue 'service' et lui donne l'objet $service
         return view('service', [
             'service' => $service
         ]);

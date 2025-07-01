@@ -1,35 +1,25 @@
 @extends('layouts.base')
 @section('body_class', 'page-with-hero')
-@section('title', $service['title'])
+@section('title', $service->title) {{-- Changement ici --}}
 
 @section('content')
 
-    <section class="hero-service" style="background-image: url('{{ asset($service['image']) }}');">
+    {{-- Changement ici --}}
+    <section class="hero-service" style="background-image: url('{{ asset($service->image) }}');">
         <div class="hero-service-content">
-            <h1 class="hero-service-title">{{ $service['title'] }}</h1>
+            <h1 class="hero-service-title">{{ $service->title }}</h1>
         </div>
     </section>
 
     <section class="service-intro-section">
         <div class="service-intro-grid">
+
+            {{-- La modification la plus importante est ici --}}
             <div class="service-description">
-                @foreach($service['description'] as $index => $block)
-                    @if($block['type'] === 'paragraph')
-                        <p class="animate-on-scroll" style="transition-delay: {{ $index * 100 }}ms;">{{ $block['content'] }}</p>
-                    @elseif($block['type'] === 'heading')
-                        <h4 class="animate-on-scroll" style="transition-delay: {{ $index * 100 }}ms;">{{ $block['content'] }}</h4>
-                    @elseif($block['type'] === 'list')
-                        <ul class="service-description-list">
-                            @foreach($block['items'] as $itemIndex => $item)
-                                <li class="animate-on-scroll" style="transition-delay: {{ ($index * 100) + ($itemIndex * 50) }}ms;">
-                                    <p><strong>{{ $item['title'] }}:</strong> {{ $item['description'] }}</p>
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-                @endforeach
+                {!! $service->content !!}
             </div>
 
+            {{-- Cette partie reste, mais on pourrait la rendre dynamique plus tard --}}
             @if(!empty($service['key_benefits']))
                 <div class="service-benefits animate-on-scroll" style="transition-delay: 200ms;">
                     <h3>Points Clés</h3>
@@ -43,6 +33,7 @@
         </div>
     </section>
 
+    {{-- Cette partie reste aussi, on pourrait la rendre dynamique plus tard --}}
     @if(!empty($service['portfolio_examples']))
         <section class="service-final-cta">
             <div class="animate-on-scroll">
