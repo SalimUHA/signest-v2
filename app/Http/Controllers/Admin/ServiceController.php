@@ -17,7 +17,8 @@ class ServiceController extends Controller
 
     public function create()
     {
-        return view('admin.services.create');
+        $colors = ['lightyellow', 'red', 'blue', 'yellow', 'darkblue', 'green', 'orange'];
+        return view('admin.services.create', compact('colors'));
     }
 
     public function store(Request $request)
@@ -43,10 +44,7 @@ class ServiceController extends Controller
 
     public function edit(Service $service)
     {
-        // On définit la liste des couleurs ici
         $colors = ['lightyellow', 'red', 'blue', 'yellow', 'darkblue', 'green', 'orange'];
-
-        // On envoie les DEUX variables à la vue
         return view('admin.services.edit', compact('service', 'colors'));
     }
 
@@ -55,13 +53,17 @@ class ServiceController extends Controller
         $validatedData = $this->validateService($request, $service->id);
 
         if ($request->hasFile('image')) {
-            if ($service->image) Storage::disk('public')->delete(str_replace('storage/', '', $service->image));
+            // ▼▼▼ MODIFICATION ICI : On ne supprime plus l'ancienne image ▼▼▼
+            // if ($service->image) Storage::disk('public')->delete(str_replace('storage/', '', $service->image));
+
             $path = $request->file('image')->store('services/images', 'public');
             $validatedData['image'] = 'storage/' . $path;
         }
 
         if ($request->hasFile('icon')) {
-            if ($service->icon) Storage::disk('public')->delete(str_replace('storage/', '', $service->icon));
+            // ▼▼▼ MODIFICATION ICI : On ne supprime plus l'ancienne icône ▼▼▼
+            // if ($service->icon) Storage::disk('public')->delete(str_replace('storage/', '', $service->icon));
+
             $path = $request->file('icon')->store('services/icons', 'public');
             $validatedData['icon'] = 'storage/' . $path;
         }
@@ -75,27 +77,27 @@ class ServiceController extends Controller
 
     public function destroy(Service $service)
     {
+        // On laisse la suppression ici, car si on supprime le service, on veut supprimer ses images.
         if ($service->image) Storage::disk('public')->delete(str_replace('storage/', '', $service->image));
         if ($service->icon) Storage::disk('public')->delete(str_replace('storage/', '', $service->icon));
+
         $service->delete();
         return redirect()->route('admin.services.index')->with('success', 'Service supprimé avec succès.');
     }
 
-    // Fonction privée pour ne pas répéter les règles de validation
     private function validateService(Request $request, $serviceId = null)
     {
         $rules = [
             'title' => 'required|string|max:255',
             'slug' => 'required|string|max:255|unique:services,slug,' . $serviceId,
             'description' => 'required|string',
-            'page_content' => 'required|json',
+            'page_content' => 'nullable|json', // Rendu nullable pour la création
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
             'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024',
             'color' => 'required|string|max:50',
         ];
 
-        // Rendre l'image et l'icône obligatoires seulement à la création
-        if (!$serviceId) {
+        if (!$serviceId) { // Si c'est une création
             $rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048';
             $rules['icon'] = 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:1024';
         }
@@ -103,10 +105,8 @@ class ServiceController extends Controller
         return $request->validate($rules);
     }
 
-    // La fonction pour notre JavaScript
     public function getPageContent(Service $service)
     {
         return response()->json($service->page_content ?? []);
     }
-
-} // <-- Fin de la classe ServiceController
+}
